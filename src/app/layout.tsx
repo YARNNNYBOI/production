@@ -1,6 +1,6 @@
 export const metadata = { 
-  title: 'My App',
-  description: 'This is my app',
+  title: 'GBK',
+  description: 'Landing page if Gundam Building Kits',
 };
 
 export default function RootLayout({ 
@@ -9,8 +9,37 @@ export default function RootLayout({
    children: React.ReactNode 
 }) {
   return (
-    <html lang="en"> 
-      <body>{children}</body>
+    <html lang="en">  
+
+      <body>
+
+<nav>
+   
+</nav>
+        <header style={{
+          padding: "2%",
+          backgroundColor: "green",
+
+        }}>
+        <h1>
+            HEADER
+        </h1>
+        </header>
+    
+    {children}
+    
+    <footer 
+    style={{
+      padding: "2%",
+      backgroundColor: "yellow",
+    }}>
+      <h1>
+        FOOTER
+      </h1>
+    </footer>
+
+    </body>
+
     </html>
   );
 }
