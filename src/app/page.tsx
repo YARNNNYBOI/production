@@ -1,8 +1,21 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Welcom to Gundam Building Kits</h1>
-    </main>
-  );
-}
+import Link from "next/link";
 
+export default async function home(){
+    await new Promise(resolve => {
+        setTimeout(() => {
+            resolve("intentional delay")
+        }, 2000);
+    })
+
+    return (
+        <header>
+            <nav>
+                <Link href="/home">Home</Link>
+                <Link href="/about">About</Link>
+                <Link href="/gallery">Gallery</Link>
+                <Link href="/contact">Contact Us</Link>
+                <Link href="/sign-in">Sign in</Link>
+            </nav>
+        </header>
+    )
+}
